@@ -1,0 +1,3838 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>wiring-pi (v2.2.1)</a>
+</h1>
+<h4>Bindings to wiringPi</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wiring-pi">module wiring-pi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.analogRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>analogRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.analogWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>analogWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.dac7678Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>dac7678Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.delay">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>delay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.delayMicroseconds">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>delayMicroseconds
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.digitalRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>digitalRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.digitalWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>digitalWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.digitalWriteByte">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>digitalWriteByte
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.drcSetupSerial">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>drcSetupSerial
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302clockRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302clockRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302clockWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302clockWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302ramRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302ramRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302ramWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302ramWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302rtcRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302rtcRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302rtcWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302rtcWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.ds1302trickleCharge">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302trickleCharge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.gertboardAnalogSetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>gertboardAnalogSetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.getAlt">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>getAlt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.gpioClockSet">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>gpioClockSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64circle">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64circle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64clear">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64clear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64ellipse">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64ellipse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64getScreenSize">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64getScreenSize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64line">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64line
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64lineTo">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64lineTo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64orientCoordinates">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64orientCoordinates
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64point">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64point
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64putchar">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64putchar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64puts">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64puts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64rectangle">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64rectangle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64setOrientation">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64setOrientation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64setOrigin">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64setOrigin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcd128x64update">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdCharDef">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdCharDef
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdClear">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdClear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdCursor">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdCursor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdCursorBlink">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdCursorBlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdDisplay">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdDisplay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdHome">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdHome
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdInit">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdInit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdPosition">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPosition
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdPrintf">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPrintf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdPutchar">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPutchar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdPuts">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPuts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.lcdSendCommand">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>lcdSendCommand
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.max31855Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>max31855Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.max5322Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>max5322Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.maxDetectRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>maxDetectRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp23008Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23008Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp23016Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23016Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp23017Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23017Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp23s08Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23s08Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp23s17Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23s17Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp3002Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp3002Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp3004Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp3004Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp3422Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp3422Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.mcp4802Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>mcp4802Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.micros">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>micros
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.millis">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>millis
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pca9685Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pca9685Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pcf8574Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pcf8574Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pcf8591Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pcf8591Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.physPinToGpio">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>physPinToGpio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piBoardId">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piBoardId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piBoardRev">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piBoardRev
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piFaceSetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piFaceSetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piGlow1">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piGlow1
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piGlowLeg">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piGlowLeg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piGlowRing">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piGlowRing
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.piGlowSetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>piGlowSetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pinMode">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pinMode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pinModeAlt">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pinModeAlt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pullUpDnControl">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pullUpDnControl
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pulseIn">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pulseIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pwmSetClock">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pwmSetClock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pwmSetMode">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pwmSetMode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pwmSetRange">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pwmSetRange
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pwmToneWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pwmToneWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.pwmWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>pwmWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.readNesJoystick">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>readNesJoystick
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.readRHT03">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>readRHT03
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialClose">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialClose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialDataAvail">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialDataAvail
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialFlush">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialFlush
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialGetchar">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialGetchar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialOpen">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialOpen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialPrintf">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialPrintf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialPutchar">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialPutchar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.serialPuts">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>serialPuts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.setPadDrive">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>setPadDrive
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.setupNesJoystick">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>setupNesJoystick
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.shiftIn">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>shiftIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.shiftOut">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>shiftOut
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.sn3218Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>sn3218Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softPwmCreate">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softPwmCreate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softPwmStop">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softPwmStop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softPwmWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softPwmWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softServoSetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softServoSetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softServoWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softServoWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softToneCreate">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softToneCreate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softToneStop">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softToneStop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.softToneWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>softToneWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.sr595Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>sr595Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725ClearInterrupt">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725ClearInterrupt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725Disable">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725Disable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725Enable">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725Enable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725GetCorrelatedColorTemperature">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725GetCorrelatedColorTemperature
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725GetIlluminance">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725GetIlluminance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725ReadHSV">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725ReadHSV
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725ReadRGBC">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725ReadRGBC
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725SetInterrupt">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725SetInterrupt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725SetInterruptLimits">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725SetInterruptLimits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.tcs34725Setup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725Setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CClose">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CClose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CRead">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CRead
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CReadReg16">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CReadReg16
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CReadReg8">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CReadReg8
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CSetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CSetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CSetupInterface">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CSetupInterface
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CWrite">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CWriteReg16">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CWriteReg16
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiI2CWriteReg8">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CWriteReg8
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiISR">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiISR
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiISRCancel">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiISRCancel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSPIClose">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPIClose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSPIDataRW">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPIDataRW
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSPIGetFd">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPIGetFd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSPISetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPISetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSPISetupMode">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPISetupMode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSetup">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSetupGpio">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetupGpio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSetupPhys">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetupPhys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wiringPiSetupSys">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetupSys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wiring-pi.wpiPinToGpio">
+            function <span class="apidocSignatureSpan">wiring-pi.</span>wpiPinToGpio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>DAC7678_VREF_MODE_FLEXIBLE_ALWAYS_OFF</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>DAC7678_VREF_MODE_FLEXIBLE_ALWAYS_ON</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>DAC7678_VREF_MODE_FLEXIBLE_ON</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>DAC7678_VREF_MODE_STATIC_OFF</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>DAC7678_VREF_MODE_STATIC_ON</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_ALT0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_ALT1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_ALT2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_ALT3</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_ALT4</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_ALT5</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_INPT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>FSEL_OUTP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>GPIO_CLOCK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>HIGH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>INPUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>INT_EDGE_BOTH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>INT_EDGE_FALLING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>INT_EDGE_RISING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>INT_EDGE_SETUP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>LOW</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>LSBFIRST</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MAX_LCDS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MAX_NES_JOYSTICKS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_GAIN_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_GAIN_2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_GAIN_4</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_GAIN_8</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_SR_15</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_SR_240</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_SR_3_75</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MCP3422_SR_60</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>MSBFIRST</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_A</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_B</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_DOWN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_LEFT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_RIGHT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_SELECT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_START</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>NES_UP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>OUTPUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PIGLOW_BLUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PIGLOW_GREEN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PIGLOW_ORANGE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PIGLOW_RED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PIGLOW_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PIGLOW_YELLOW</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MAKER_EGOMAN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MAKER_MBEST</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MAKER_QISDA</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MAKER_SONY</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MAKER_UNKNOWN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_A</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_AP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_B</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_BP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_CM</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_UNKNOWN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_VERSION_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_VERSION_1_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_VERSION_1_2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_VERSION_2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PI_VERSION_UNKNOWN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PUD_DOWN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PUD_OFF</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PUD_UP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PWM_MODE_BAL</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PWM_MODE_MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>PWM_OUTPUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>SOFT_PWM_OUTPUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>SOFT_TONE_OUTPUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_ATIME_101MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_ATIME_154MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_ATIME_24MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_ATIME_2_4MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_ATIME_50MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_ATIME_700MS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_GAIN_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_GAIN_16</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_GAIN_4</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_GAIN_60</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>TCS34725_MAX_TCS34725</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>WPI_MODE_GPIO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>WPI_MODE_GPIO_SYS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>WPI_MODE_PHYS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>WPI_MODE_PIFACE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>WPI_MODE_PINS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">wiring-pi.</span>WPI_MODE_UNINITIALISED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wiring-pi.</span>PI_MAKER_NAMES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wiring-pi.</span>PI_MODEL_NAMES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wiring-pi.</span>PI_REVISION_NAMES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">wiring-pi.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wiring-pi" id="apidoc.module.wiring-pi">module wiring-pi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.analogRead" id="apidoc.element.wiring-pi.analogRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>analogRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">analogRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.analogWrite" id="apidoc.element.wiring-pi.analogWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>analogWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">analogWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.dac7678Setup" id="apidoc.element.wiring-pi.dac7678Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>dac7678Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dac7678Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.delay" id="apidoc.element.wiring-pi.delay">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>delay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delay = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.delayMicroseconds" id="apidoc.element.wiring-pi.delayMicroseconds">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>delayMicroseconds
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delayMicroseconds = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.digitalRead" id="apidoc.element.wiring-pi.digitalRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>digitalRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digitalRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.digitalWrite" id="apidoc.element.wiring-pi.digitalWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>digitalWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digitalWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.digitalWriteByte" id="apidoc.element.wiring-pi.digitalWriteByte">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>digitalWriteByte
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digitalWriteByte = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.drcSetupSerial" id="apidoc.element.wiring-pi.drcSetupSerial">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>drcSetupSerial
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drcSetupSerial = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302clockRead" id="apidoc.element.wiring-pi.ds1302clockRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302clockRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302clockRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302clockWrite" id="apidoc.element.wiring-pi.ds1302clockWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302clockWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302clockWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302ramRead" id="apidoc.element.wiring-pi.ds1302ramRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302ramRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302ramRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302ramWrite" id="apidoc.element.wiring-pi.ds1302ramWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302ramWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302ramWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302rtcRead" id="apidoc.element.wiring-pi.ds1302rtcRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302rtcRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302rtcRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302rtcWrite" id="apidoc.element.wiring-pi.ds1302rtcWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302rtcWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302rtcWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302setup" id="apidoc.element.wiring-pi.ds1302setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.ds1302trickleCharge" id="apidoc.element.wiring-pi.ds1302trickleCharge">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>ds1302trickleCharge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ds1302trickleCharge = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.gertboardAnalogSetup" id="apidoc.element.wiring-pi.gertboardAnalogSetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>gertboardAnalogSetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gertboardAnalogSetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.getAlt" id="apidoc.element.wiring-pi.getAlt">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>getAlt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAlt = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.gpioClockSet" id="apidoc.element.wiring-pi.gpioClockSet">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>gpioClockSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gpioClockSet = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64circle" id="apidoc.element.wiring-pi.lcd128x64circle">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64circle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64circle = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64clear" id="apidoc.element.wiring-pi.lcd128x64clear">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64clear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64clear = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64ellipse" id="apidoc.element.wiring-pi.lcd128x64ellipse">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64ellipse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64ellipse = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64getScreenSize" id="apidoc.element.wiring-pi.lcd128x64getScreenSize">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64getScreenSize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64getScreenSize = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64line" id="apidoc.element.wiring-pi.lcd128x64line">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64line
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64line = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64lineTo" id="apidoc.element.wiring-pi.lcd128x64lineTo">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64lineTo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64lineTo = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64orientCoordinates" id="apidoc.element.wiring-pi.lcd128x64orientCoordinates">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64orientCoordinates
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64orientCoordinates = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64point" id="apidoc.element.wiring-pi.lcd128x64point">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64point
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64point = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64putchar" id="apidoc.element.wiring-pi.lcd128x64putchar">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64putchar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64putchar = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64puts" id="apidoc.element.wiring-pi.lcd128x64puts">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64puts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64puts = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64rectangle" id="apidoc.element.wiring-pi.lcd128x64rectangle">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64rectangle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64rectangle = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64setOrientation" id="apidoc.element.wiring-pi.lcd128x64setOrientation">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64setOrientation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64setOrientation = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64setOrigin" id="apidoc.element.wiring-pi.lcd128x64setOrigin">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64setOrigin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64setOrigin = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64setup" id="apidoc.element.wiring-pi.lcd128x64setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcd128x64update" id="apidoc.element.wiring-pi.lcd128x64update">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcd128x64update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcd128x64update = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdCharDef" id="apidoc.element.wiring-pi.lcdCharDef">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdCharDef
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdCharDef = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdClear" id="apidoc.element.wiring-pi.lcdClear">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdClear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdClear = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdCursor" id="apidoc.element.wiring-pi.lcdCursor">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdCursor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdCursor = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdCursorBlink" id="apidoc.element.wiring-pi.lcdCursorBlink">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdCursorBlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdCursorBlink = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdDisplay" id="apidoc.element.wiring-pi.lcdDisplay">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdDisplay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdDisplay = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdHome" id="apidoc.element.wiring-pi.lcdHome">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdHome
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdHome = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdInit" id="apidoc.element.wiring-pi.lcdInit">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdInit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdInit = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdPosition" id="apidoc.element.wiring-pi.lcdPosition">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPosition
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdPosition = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdPrintf" id="apidoc.element.wiring-pi.lcdPrintf">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPrintf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdPrintf = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdPutchar" id="apidoc.element.wiring-pi.lcdPutchar">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPutchar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdPutchar = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdPuts" id="apidoc.element.wiring-pi.lcdPuts">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdPuts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdPuts = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.lcdSendCommand" id="apidoc.element.wiring-pi.lcdSendCommand">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>lcdSendCommand
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lcdSendCommand = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.max31855Setup" id="apidoc.element.wiring-pi.max31855Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>max31855Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max31855Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.max5322Setup" id="apidoc.element.wiring-pi.max5322Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>max5322Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max5322Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.maxDetectRead" id="apidoc.element.wiring-pi.maxDetectRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>maxDetectRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">maxDetectRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp23008Setup" id="apidoc.element.wiring-pi.mcp23008Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23008Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp23008Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp23016Setup" id="apidoc.element.wiring-pi.mcp23016Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23016Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp23016Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp23017Setup" id="apidoc.element.wiring-pi.mcp23017Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23017Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp23017Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp23s08Setup" id="apidoc.element.wiring-pi.mcp23s08Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23s08Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp23s08Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp23s17Setup" id="apidoc.element.wiring-pi.mcp23s17Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp23s17Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp23s17Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp3002Setup" id="apidoc.element.wiring-pi.mcp3002Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp3002Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp3002Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp3004Setup" id="apidoc.element.wiring-pi.mcp3004Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp3004Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp3004Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp3422Setup" id="apidoc.element.wiring-pi.mcp3422Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp3422Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp3422Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.mcp4802Setup" id="apidoc.element.wiring-pi.mcp4802Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>mcp4802Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mcp4802Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.micros" id="apidoc.element.wiring-pi.micros">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>micros
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">micros = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.millis" id="apidoc.element.wiring-pi.millis">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>millis
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">millis = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pca9685Setup" id="apidoc.element.wiring-pi.pca9685Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pca9685Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pca9685Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pcf8574Setup" id="apidoc.element.wiring-pi.pcf8574Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pcf8574Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pcf8574Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pcf8591Setup" id="apidoc.element.wiring-pi.pcf8591Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pcf8591Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pcf8591Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.physPinToGpio" id="apidoc.element.wiring-pi.physPinToGpio">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>physPinToGpio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">physPinToGpio = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piBoardId" id="apidoc.element.wiring-pi.piBoardId">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piBoardId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piBoardId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piBoardRev" id="apidoc.element.wiring-pi.piBoardRev">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piBoardRev
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piBoardRev = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piFaceSetup" id="apidoc.element.wiring-pi.piFaceSetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piFaceSetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piFaceSetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piGlow1" id="apidoc.element.wiring-pi.piGlow1">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piGlow1
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piGlow1 = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piGlowLeg" id="apidoc.element.wiring-pi.piGlowLeg">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piGlowLeg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piGlowLeg = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piGlowRing" id="apidoc.element.wiring-pi.piGlowRing">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piGlowRing
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piGlowRing = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.piGlowSetup" id="apidoc.element.wiring-pi.piGlowSetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>piGlowSetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">piGlowSetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pinMode" id="apidoc.element.wiring-pi.pinMode">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pinMode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pinMode = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pinModeAlt" id="apidoc.element.wiring-pi.pinModeAlt">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pinModeAlt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pinModeAlt = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pullUpDnControl" id="apidoc.element.wiring-pi.pullUpDnControl">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pullUpDnControl
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pullUpDnControl = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pulseIn" id="apidoc.element.wiring-pi.pulseIn">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pulseIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pulseIn = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pwmSetClock" id="apidoc.element.wiring-pi.pwmSetClock">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pwmSetClock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmSetClock = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pwmSetMode" id="apidoc.element.wiring-pi.pwmSetMode">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pwmSetMode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmSetMode = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pwmSetRange" id="apidoc.element.wiring-pi.pwmSetRange">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pwmSetRange
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmSetRange = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pwmToneWrite" id="apidoc.element.wiring-pi.pwmToneWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pwmToneWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmToneWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.pwmWrite" id="apidoc.element.wiring-pi.pwmWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>pwmWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.readNesJoystick" id="apidoc.element.wiring-pi.readNesJoystick">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>readNesJoystick
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readNesJoystick = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.readRHT03" id="apidoc.element.wiring-pi.readRHT03">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>readRHT03
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readRHT03 = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialClose" id="apidoc.element.wiring-pi.serialClose">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialClose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialClose = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialDataAvail" id="apidoc.element.wiring-pi.serialDataAvail">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialDataAvail
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialDataAvail = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialFlush" id="apidoc.element.wiring-pi.serialFlush">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialFlush
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialFlush = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialGetchar" id="apidoc.element.wiring-pi.serialGetchar">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialGetchar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialGetchar = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialOpen" id="apidoc.element.wiring-pi.serialOpen">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialOpen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialOpen = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialPrintf" id="apidoc.element.wiring-pi.serialPrintf">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialPrintf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialPrintf = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialPutchar" id="apidoc.element.wiring-pi.serialPutchar">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialPutchar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialPutchar = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.serialPuts" id="apidoc.element.wiring-pi.serialPuts">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>serialPuts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serialPuts = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.setPadDrive" id="apidoc.element.wiring-pi.setPadDrive">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>setPadDrive
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPadDrive = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.setup" id="apidoc.element.wiring-pi.setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.setupNesJoystick" id="apidoc.element.wiring-pi.setupNesJoystick">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>setupNesJoystick
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setupNesJoystick = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.shiftIn" id="apidoc.element.wiring-pi.shiftIn">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>shiftIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftIn = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.shiftOut" id="apidoc.element.wiring-pi.shiftOut">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>shiftOut
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftOut = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.sn3218Setup" id="apidoc.element.wiring-pi.sn3218Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>sn3218Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sn3218Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softPwmCreate" id="apidoc.element.wiring-pi.softPwmCreate">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softPwmCreate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softPwmCreate = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softPwmStop" id="apidoc.element.wiring-pi.softPwmStop">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softPwmStop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softPwmStop = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softPwmWrite" id="apidoc.element.wiring-pi.softPwmWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softPwmWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softPwmWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softServoSetup" id="apidoc.element.wiring-pi.softServoSetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softServoSetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softServoSetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softServoWrite" id="apidoc.element.wiring-pi.softServoWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softServoWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softServoWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softToneCreate" id="apidoc.element.wiring-pi.softToneCreate">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softToneCreate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softToneCreate = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softToneStop" id="apidoc.element.wiring-pi.softToneStop">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softToneStop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softToneStop = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.softToneWrite" id="apidoc.element.wiring-pi.softToneWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>softToneWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softToneWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.sr595Setup" id="apidoc.element.wiring-pi.sr595Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>sr595Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sr595Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725ClearInterrupt" id="apidoc.element.wiring-pi.tcs34725ClearInterrupt">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725ClearInterrupt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725ClearInterrupt = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725Disable" id="apidoc.element.wiring-pi.tcs34725Disable">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725Disable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725Disable = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725Enable" id="apidoc.element.wiring-pi.tcs34725Enable">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725Enable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725Enable = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725GetCorrelatedColorTemperature" id="apidoc.element.wiring-pi.tcs34725GetCorrelatedColorTemperature">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725GetCorrelatedColorTemperature
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725GetCorrelatedColorTemperature = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725GetIlluminance" id="apidoc.element.wiring-pi.tcs34725GetIlluminance">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725GetIlluminance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725GetIlluminance = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725ReadHSV" id="apidoc.element.wiring-pi.tcs34725ReadHSV">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725ReadHSV
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725ReadHSV = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725ReadRGBC" id="apidoc.element.wiring-pi.tcs34725ReadRGBC">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725ReadRGBC
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725ReadRGBC = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725SetInterrupt" id="apidoc.element.wiring-pi.tcs34725SetInterrupt">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725SetInterrupt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725SetInterrupt = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725SetInterruptLimits" id="apidoc.element.wiring-pi.tcs34725SetInterruptLimits">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725SetInterruptLimits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725SetInterruptLimits = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.tcs34725Setup" id="apidoc.element.wiring-pi.tcs34725Setup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>tcs34725Setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tcs34725Setup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CClose" id="apidoc.element.wiring-pi.wiringPiI2CClose">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CClose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CClose = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CRead" id="apidoc.element.wiring-pi.wiringPiI2CRead">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CRead
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CRead = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CReadReg16" id="apidoc.element.wiring-pi.wiringPiI2CReadReg16">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CReadReg16
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CReadReg16 = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CReadReg8" id="apidoc.element.wiring-pi.wiringPiI2CReadReg8">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CReadReg8
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CReadReg8 = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CSetup" id="apidoc.element.wiring-pi.wiringPiI2CSetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CSetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CSetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CSetupInterface" id="apidoc.element.wiring-pi.wiringPiI2CSetupInterface">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CSetupInterface
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CSetupInterface = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CWrite" id="apidoc.element.wiring-pi.wiringPiI2CWrite">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CWrite = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CWriteReg16" id="apidoc.element.wiring-pi.wiringPiI2CWriteReg16">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CWriteReg16
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CWriteReg16 = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiI2CWriteReg8" id="apidoc.element.wiring-pi.wiringPiI2CWriteReg8">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiI2CWriteReg8
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiI2CWriteReg8 = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiISR" id="apidoc.element.wiring-pi.wiringPiISR">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiISR
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiISR = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiISRCancel" id="apidoc.element.wiring-pi.wiringPiISRCancel">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiISRCancel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiISRCancel = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSPIClose" id="apidoc.element.wiring-pi.wiringPiSPIClose">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPIClose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSPIClose = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSPIDataRW" id="apidoc.element.wiring-pi.wiringPiSPIDataRW">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPIDataRW
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSPIDataRW = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSPIGetFd" id="apidoc.element.wiring-pi.wiringPiSPIGetFd">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPIGetFd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSPIGetFd = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSPISetup" id="apidoc.element.wiring-pi.wiringPiSPISetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPISetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSPISetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSPISetupMode" id="apidoc.element.wiring-pi.wiringPiSPISetupMode">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSPISetupMode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSPISetupMode = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSetup" id="apidoc.element.wiring-pi.wiringPiSetup">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSetup = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSetupGpio" id="apidoc.element.wiring-pi.wiringPiSetupGpio">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetupGpio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSetupGpio = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSetupPhys" id="apidoc.element.wiring-pi.wiringPiSetupPhys">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetupPhys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSetupPhys = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wiringPiSetupSys" id="apidoc.element.wiring-pi.wiringPiSetupSys">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wiringPiSetupSys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wiringPiSetupSys = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wiring-pi.wpiPinToGpio" id="apidoc.element.wiring-pi.wpiPinToGpio">
+        function <span class="apidocSignatureSpan">wiring-pi.</span>wpiPinToGpio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wpiPinToGpio = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
